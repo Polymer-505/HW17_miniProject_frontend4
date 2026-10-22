@@ -1,0 +1,77 @@
+<article class="post-card" data-post-id="{{id}}">
+  <header class="post-card__header">
+    <div class="post-author">
+      <span class="post-author__avatar" aria-hidden="true">
+        {{initial}}
+      </span>
+      <div class="post-author__info">
+        <p class="post-author__name">
+          {{author}}
+        </p>
+        <time class="post-date">
+          {{date}}
+        </time>
+      </div>
+    </div>
+    <span class="post-card__id">
+      POST /
+      {{id}}
+    </span>
+  </header>
+  <div class="post-card__content">
+    <h3 class="post-card__title">
+      {{title}}
+    </h3>
+    <p class="post-card__body">
+      {{body}}
+    </p>
+  </div>
+  <footer class="post-card__footer">
+    <button
+      class="comments-toggle"
+      type="button"
+      data-action="toggle-comments"
+      aria-expanded="false"
+    >
+      <span aria-hidden="true">↳</span>
+      Коментарі
+      <span class="comments-toggle__count" data-comment-count>
+        0
+      </span>
+    </button>
+  </footer>
+  <section class="comments-panel" data-comments-panel hidden>
+    <div class="comments-panel__heading">
+      <h4>Обговорення</h4>
+    </div>
+    <div class="comments-list" data-comments-list></div>
+    <form class="comment-form" data-comment-form data-post-id="{{id}}">
+      <label for="comment-name-{{id}}">
+        Твоє ім'я
+      </label>
+      <input
+        id="comment-name-{{id}}"
+        name="name"
+        type="text"
+        placeholder="Як тебе звати?"
+        maxlength="60"
+        required
+      />
+      <label for="comment-body-{{id}}">
+        Коментар
+      </label>
+      <textarea
+        id="comment-body-{{id}}"
+        name="body"
+        placeholder="Напиши свою думку..."
+        rows="3"
+        maxlength="1000"
+        required
+      ></textarea>
+      <button class="button button--primary" type="submit">
+        Додати коментар
+      </button>
+      <p class="form-message" data-comment-message role="status" hidden></p>
+    </form>
+  </section>
+</article>
