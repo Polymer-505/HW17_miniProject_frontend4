@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang=uk><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><meta name=description content="Місце для дописів, думок і цікавих обговорень."><title>Postroom - Posts &amp; Comments</title><link rel=stylesheet href=/lesson_20/HW17_miniProject_frontend4.00c27286.css><body>
+    <header class=header>
+      <div class="container header__inner">
+        <a href=# class=logo aria-label="Postroom - головна">
+          <span class=logo__icon>P</span>
+          <span>postroom</span>
+          <span class=logo__period>.</span>
+        </a>
+        <nav class=nav aria-label="Основна навігація">
+          <a href=#posts class="nav__link nav__link--active"> Дописи </a>
+
+          <a href=#create-post class=nav__link> Створити допис </a>
+        </nav>
+        <span class=header__label> COMMUNITY SPACE </span>
+      </div>
+    </header>
+
+    <main class="container main">
+      <section class=intro>
+        <div class=intro__content>
+          <p class=eyebrow>YOUR SPACE TO SHARE</p>
+          <h1 class=intro__title>
+            Думки стають
+            <span>кращими в діалозі.</span>
+          </h1>
+          <p class=intro__description>
+            Ділися ідеями, читай дописи інших і приєднуйся до розмови. Тут кожна
+            думка може стати початком чогось цікавого.
+          </p>
+        </div>
+        <div class=intro__decoration aria-hidden=true>
+          <span class=intro__decoration-mark>P.</span>
+          <span class=intro__decoration-caption>
+            WRITE. SHARE. CONNECT.
+          </span>
+        </div>
+      </section>
+      <div class=content-grid>
+        <section class=feed id=posts>
+          <div class=section-heading>
+            <div>
+              <p class=eyebrow>THE COMMUNITY</p>
+
+              <h2 class=section-title>Останні дописи</h2>
+            </div>
+            <span class=feed__label> ALL POSTS </span>
+          </div>
+          <p class=status-message id=loadingMessage role=status>
+            Завантажуємо дописи...
+          </p>
+          <div class="message message--error" id=errorMessage role=alert hidden>
+            <p>Не вдалося завантажити дописи.</p>
+
+            <button class="button button--secondary" id=retryButton type=button>
+              Спробувати ще раз
+            </button>
+          </div>
+          <div class=empty-state id=emptyState hidden>
+            <span class=empty-state__icon aria-hidden=true> ✳ </span>
+            <h3>Тут поки тихо</h3>
+            <p>Створи перший допис і розпочни розмову.</p>
+          </div>
+          <div class=posts-list id=postsList aria-live=polite></div>
+        </section>
+        <aside class=sidebar id=create-post>
+          <section class=composer>
+            <div class=composer__heading>
+              <p class=eyebrow>START A CONVERSATION</p>
+              <h2 class=composer__title>Створи допис</h2>
+              <p class=composer__description>
+                Маєш ідею, якою хочеться поділитися? Напиши про неї.
+              </p>
+            </div>
+            <form id=createPostForm class=post-form>
+              <div class=form-field>
+                <label for=postAuthor> Твоє ім'я </label>
+                <input id=postAuthor name=author placeholder="Наприклад, Олександр" maxlength=60 required>
+              </div>
+              <div class=form-field>
+                <label for=postTitle> Заголовок </label>
+                <input id=postTitle name=title placeholder="Про що думаєш?" maxlength=120 required>
+              </div>
+              <div class=form-field>
+                <label for=postBody> Твій допис </label>
+                <textarea id=postBody name=body placeholder="Розкажи трохи більше..." rows=5 maxlength=2000 required></textarea>
+                <span class=field-hint> Поділися думкою з іншими. </span>
+              </div>
+              <button class="button button--full button--primary">
+                Опублікувати допис
+                <span aria-hidden=true>↗</span>
+              </button>
+              <p class=form-message id=postFormMessage role=status hidden></p>
+            </form>
+          </section>
+          <section class=sidebar-note>
+            <span class=sidebar-note__number> 01 / COMMUNITY </span>
+            <h3>Хороша розмова починається з думки.</h3>
+            <p>Пиши, відповідай і залишай місце для нових поглядів.</p>
+          </section>
+        </aside>
+      </div>
+    </main>
+    <footer class=footer>
+      <div class="container footer__inner">
+        <a href=# class="logo logo--footer">
+          postroom<span class=logo__period>.</span>
+        </a>
+        <p>Створено для думок, якими хочеться ділитися.</p>
+        <span class=footer__copyright> POSTS &amp; COMMENTS </span>
+      </div>
+    </footer>
+    <script src=/lesson_20/HW17_miniProject_frontend4.7ac0abad.js type=module></script>
+  
+
